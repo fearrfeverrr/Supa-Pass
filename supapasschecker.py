@@ -75,7 +75,7 @@ def check_password_strength(remarks=None):
 def check_another_password():
     """Asks the user if they want to check another password."""
     while True:
-        choice = input("🔄 Do you want to check another password? (y/n): ").strip().lower()
+        choice = input("🔄 Do you want to check your desired password? (yes/no): ").strip().lower()
         if choice == 'yes':
             return True
         elif choice == 'no':
