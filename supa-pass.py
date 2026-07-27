@@ -17,12 +17,14 @@ print("Welcome to the SupaPass Generator and Strength checker!")
 nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
-word_guess = print(input("Would you like to add a random word? (yes/no):\n").lower())
+word_guess = input("Would you like to add a random word? (yes/no):\n").lower()
 
-if True == 'yes':
-    print(random.supa_dict)
+if word_guess == "yes":
+    print(supa_dict)
+elif "no" in word_guess:
+    print('Your Password will be harder to memorize.')
 else:
-    print("Your Password will be harder to memorize.")
+    print("Your Password will be harder to guess! You can use the 'SupaPass Checker' to enure quality Level.")
 
 password_list = []
 for char in range(0, nr_letters):
@@ -38,7 +40,7 @@ for char in range(0, nr_numbers):
 
 print(password_list)
 random.shuffle(password_list)
-print(password_list)
+print(supa_dict)
 
 password = ""
 for char in password_list:
